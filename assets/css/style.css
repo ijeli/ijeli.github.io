@@ -1,0 +1,86 @@
+body {
+    height: 100%;
+    background: url("../images/wood_1.png");
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bolder;
+}
+
+container {
+    width: auto;
+    height: auto;
+    margin-top: 288px;
+}
+
+.frontCard {
+    z-index: 1;
+}
+
+.card {
+    background-color: rgb(212, 218, 223);
+    width: auto; 
+    height: auto;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-width: 10px;
+    border-style: double;
+    border-color: rgb(53, 45, 45);
+}
+
+.cardStart {
+    margin-top: 100px;
+}
+
+.cards {
+    background-color: rgb(212, 218, 223);
+    width: auto; 
+    height: auto;
+    border-width: 10px;
+    border-style: double;
+    border-color: rgb(53, 45, 45);
+}
+
+
+  
+.center {
+    position: absolute;
+    margin: auto;
+    top: 25%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    border-radius: 3px;
+}
+
+.mainclickables:hover {
+    background: grey;
+    color: white;
+    cursor: pointer;
+}
+
+mainclickablesicon:hover {
+    cursor: pointer;
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+h5 {
+    color: Black;
+    font-weight: bold;
+}
+
+.image {
+    overflow: hidden;
+    transition-duration: 2.0s;
+    transition-property: transform;
+}
+.image:hover {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+}
+

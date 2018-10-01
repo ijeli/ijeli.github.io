@@ -1,51 +1,266 @@
-<!-- HTML with THREE stylesheets! -->
 <!DOCTYPE html>
-<html lang="en-us">
+
+<html>
 
 <head>
-
-  <meta charset="UTF-8">
-  <title>1.2.9 Exercise</title>
-
-  <!-- This critical line points your HTML to the CSS file. Notice the "relative" pathway  -->
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <!-- Plus TWO MORE -->
-  <link rel="stylesheet" type="text/css" href="style2.css">
-  <link rel="stylesheet" type="text/css" href="style3.css">
+    <title>Portfolio Legaspi</title>
+    <link rel= "stylesheet" href = "assets/css/reset.css" type = "text/css"/>
+    <link rel= "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel = "stylesheet" href="assets/css/style.css" type= "text/css"/>
+    <link rel = "stylesheet" href="assets/css/animation.css" type= "text/css"/> <!--https://daneden.github.io/animate.css/-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 
 </head>
 
 <body>
-  <header>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
 
-    <h1>Student Bio</h1>
+    <div id = "topme" class = "container ">
+        <div class = "card cardStart fadeInDown animated frontCard">
+            <br>
+            <div class = "row">
+                <div class = "col-lg-12">
+                    <div class = "row">
+                        <div class = "col-lg-12 text-center">
+                            <img id = "hideall" class = "rounded-circle img-fluid mainclickablesicon backtop " src = "./assets/images/propic.jpg" alt = "headshot" width="300px" height="300px">
+                        </div>
+                    </div>
+                    <br>
+                    <div class = "row">
+                        <div class = "col-lg-12 text-center">
+                            <h1><strong>Jeremy Legaspi</strong></h1>
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <div class = "col-lg-12 text-center">
+                            <a style="text-decoration:none" href = "https://www.linkedin.com/in/JELegaspi" target="_blank">
+                                <img id = "linkedin" class = "mainclickablesicon image" src = "./assets/images/linkedin.png" alt = "Linkedin" width = "25px" height = "25px">
+                            </a>
+                            <a style="text-decoration:none" href = "https://github.com/ijeli" target="_blank">
+                                <img id = "github" class = "mainclickablesicon image" src = "./assets/images/github.png" alt = "Github" width = "25px" height = "25px">
+                            </a>
+                            <a style="text-decoration:none" href = "#" target="_blank">
+                                <img id = "SOF" class = "mainclickablesicon image" src = "./assets/images/stackoverflow.png" alt = "Stack Overflow" width = "25px" height = "25px">
+                            </a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class = "row" align = "center">
+                        <div class = "col-lg-3 ">
+                            <a href = "#aboutCardb" style = "text-decoration: none;">
+                                <h5 id = "about" class = "mainclickables">ABOUT<span class="fa fa-chevron-down"></span></h5>
+                            </a>
+                        </div>
+                        <div class = "col-lg-3 ">
+                            <a href = "#worksCardb" style = "text-decoration: none;">
+                                <h5 id = "works" class = "mainclickables">WORKS<span class="fa fa-chevron-down"></h5>
+                            </a>
+                        </div>
+                        <div class = "col-lg-3 ">
+                            <a href = "#skillsCardb" style = "text-decoration: none;">
+                                <h5 id = "skills" class = "mainclickables">SKILLS<span class="fa fa-chevron-down"></h5>
+                            </a>
+                        </div>
+                        <div class = "col-lg-3 ">
+                            <a href = "#contactCardb" style = "text-decoration: none;">
+                                <h5 id = "contact" class = "mainclickables">CONTACT<span class="fa fa-chevron-down"></h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id = "aboutCard" class = "cards hidden fadeInDown animated" >
+            <br>
+            <h2 align = "center">
+                About Me
+                <button type="button" class="btn btn-outline-dark btn-sm hideallbutton backtop">
+                    <span class="fa fa-chevron-up"></span>
+                </button>
+            </h2>
+            <div class = "row">
+                <div class = "col-lg-1"></div>
+                <div class = "col-lg-10 border-bottom border-dark"></div>
+            </div>
+            <br>
+            <div class = "row">
+                    <div class = "col-lg-1"></div>
+                    <div class = "col-lg-3 text-center">
+                        <img class = "rounded-circle img-fluid" src = "./assets/images/holder.jpg" alt = "About Headshot" width="250px" height="250px" align = "center"/>
+                    </div>
+                    <div class = "col-lg-7">
+                        <div class = "row">
+                            <div class = "col-lg-1"></div>
+                            <div class = "col-lg-10">
+                                <p>
+                                    I am certified Full-Stack Web Developer, located in the Washington, D.C. area. 
+                                    I am well verse in both frontend 
+                                    user interfaces design and back ended logic and database building. 
+                                    My drive is to meet your full stack development needs.
+                                </p>
+                            </div>
+                        </div>
+                        <div class = "row">
+                            <div class = "col-lg-1"></div>
+                            <div class = "col-lg-5">
+                                <p>AGE.....24</p>
+                                <p>FREELANCE.....Available</p>
+                            </div>
+                            <div class = "col-lg-5">
+                                <p>RESIDENCE.....USA</p>
+                                <p>ADDRESS.....Arlington, VA</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "col-lg-1"></div>
+            </div>
+            <br id = "aboutCardb">
+        </div >
+        <div id = "worksCard" class = "cards hidden">
+            <br>
+            <h2  align = "center">
+                Works
+                <button type="button" class="btn btn-outline-dark btn-sm hideallbutton backtop">
+                    <span class="fa fa-chevron-up"></span>
+                </button>
+            </h2>
+            <div class = "row">
+                <div class = "col-lg-1"></div>
+                <div class = "col-lg-10 border-bottom border-dark"></div>
+            </div>
+            <br>
+            <div class = "row">
+                <div class = "col-lg-1"></div>
+                <div class = "col-lg-10">
+                    <div id="carousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel" data-slide-to="1"></li>
+                            <li data-target="#carousel" data-slide-to="2"></li>
+                            <li data-target="#carousel" data-slide-to="3"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <a href="https://btmbrawl1.herokuapp.com/" target="_blank">
+                                    <img class="d-block w-100 img-fluid carofixsize" src="./assets/images/btmbrawler.png" alt="First slide">
+                                </a>
+                                <div class="carousel-caption d-none d-md-block">
+                                    <!-- <h5>BTM Brawlers</h5> -->
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <a href = "http://www.boloneytimemachine.com/fifaworldcup2018.html" target="_blank">
+                                    <img class="d-block w-100 img-fluid carofixsize" src="./assets/images/WorldCupHub.png" alt="Second slide">
+                                </a>
+                                <div class="carousel-caption d-none d-md-block">
+                                    <!-- <h5>World Cup Hub</h5> -->
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <a href = "https://ijeli.github.io/TriviaGame/" target="_blank">
+                                    <img class="d-block w-100 img-fluid carofixsize" src="./assets/images/TriviaGame.png" alt="Third slide">
+                                </a>
+                                <div class="carousel-caption d-none d-md-block">
+                                    <!-- <h5>Trivia Game</h5> -->
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="https://ijeli.github.io/unit-4-game/" target="_blank">
+                                    <img class="d-block w-100 img-fluid carofixsize" src="./assets/images/zombieGame.png" alt="Fourth slide">
+                                </a>
+                                <div class="carousel-caption d-none d-md-block">
+                                    <!-- <h5>Zombie Game</h5> -->
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <br id = "worksCardb">
+        </div>
+        <div id = "skillsCard" class = "cards hidden fadeInDown animated" >
+            <br>
+            <h2 align = "center">
+                Skills
+                <button type="button" class="btn btn-outline-dark btn-sm hideallbutton backtop">
+                    <span class="fa fa-chevron-up"></span>
+                </button>
+            </h2>
+            <div class = "row">
+                <div class = "col-lg-1"></div>
+                <div class = "col-lg-5" align = "center">
+                    <h4><strong><ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Bootstrap</li>
+                        <li>Javascript</li>
+                        <li>jquery</li>
+                    </ul></strong></h4>
+                </div>
+                <div class = "col-lg-5" align = "center">
+                    <h4><strong><ul>
+                        <li>Node.js</li>
+                        <li>npm</li>
+                        <li>mySql</li>
+                        <li>MONGO.db</li>
+                        <li>REACT.js</li>
+                    </ul></strong></h4>
+                </div>
+        </div>
+        </div >
+        <div id = "contactCard" class = "cards hidden">
+            <br>
+            <h2  align = "center">
+                Contact Me
+                <button type="button" class="btn btn-outline-dark btn-sm hideallbutton backtop">
+                    <span class="fa fa-chevron-up"></span>
+                </button>
+            </h2>
+            <div class = "row">
+                <div class = "col-lg-1"></div>
+                <div class = "col-lg-10 border-bottom border-dark"></div>
+            </div>
+            <br>
+            <div class = "row">
+                <div class = "col-lg-1"></div>
+                <div class = "col-lg-4" align = "center">
+                    <h4>
+                        <span class="fas fa-phone"></span> 
+                        <span>703-505-2375</span>
+                    </h4>
+                </div>
+                <div class = "col-lg-1"></div>
+                <div class = "col-lg-4" align = "center">
+                    <h4>
+                        <span class="far fa-envelope"></span>
+                        <a style="text-decoration:none" href = "mailto:legaspi.jel@gmail.com">legaspi.jel@gmail.com</a>
+                    </h4>
+                </div>
+            </div>
+            <br id = "contactCardb">
+        </div >
+    </div>
+    <br>
 
-  </header>
+                
 
-  <div class="container">
 
-    <section id="main-bio">
-
-      <h2>Your Name</h2>
-      <img src="http://placehold.it/200x200" alt="Your Image" id="bio-image">
-      <p>Write a short paragraph or two about yourself, or use placeholder text from <a href="http://www.lipsum.com/">www.lipsum.com</a></p>
-
-    </section>
-
-    <section id="contact-info">
-
-      <h2>Contact Info</h2>
-
-      <ul>
-        <li><strong>Email:</strong> <a href="#">someplace@gmail.com</a></li>
-        <li><strong>Github:</strong> <a href="#">sampleName</a></li>
-        <li><strong>Portfolio:</strong> <a href="#">coming soon</a></li>
-      </ul>
-
-    </section>
-
-  </div>
-
+    <script src="assets/javascript/script.js"></script>
 </body>
 
 </html>
